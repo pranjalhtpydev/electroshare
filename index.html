@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing with Code</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="auth-container">
+        <h1>File Sharing with Code</h1>
+        <div id="login-container">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <button id="google-login-btn">Login with Google</button>
+            <button id="forgot-password-btn">Forgot Password</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+    </div>
+    
+    <div id="file-sharing-container" style="display:none;">
+        <button id="signout-btn">Sign Out</button>
+        <h2>File Sharing</h2>
+        <input type="file" id="file-input">
+        <input type="text" id="custom-code" placeholder="Enter custom 6-digit code (optional)">
+        <button id="share-file-btn">Share File</button>
+        <p>Share this code with receiver: <span id="share-code"></span></p>
+        <progress id="upload-progress" value="0" max="100" style="width: 100%; display: none;"></progress>
+
+        <h2>Retrieve File</h2>
+        <input type="text" id="retrieve-code" placeholder="Enter 6-digit code">
+        <button id="retrieve-file-btn">Retrieve File</button>
+        <div id="file-list"></div>
+        
+        <h2>Sharing History</h2>
+        <div id="history-list"></div>
+        <button id="clear-history-btn">Clear History</button>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+    <!-- Firebase Storage -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage-compat.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
